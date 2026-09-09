@@ -90,12 +90,12 @@
     </a>
   </div>
 
-  <h2>Synthetic faces (GAN-generated identities)</h2>
+  <h2>Synthetic faces and images: from GANs to diffusion</h2>
   <div class="cards">
     <a class="card" href="https://papers.nips.cc/paper/5423-generative-adversarial-nets">
       <div class="t">Goodfellow et al. — Generative Adversarial Nets (2014)</div>
       <div class="d">The foundational paper introducing generative adversarial networks (GANs),
-      the technique behind the synthetic profile photos discussed in the piece.</div>
+      the technique behind the earliest wave of synthetic profile photos discussed in the piece.</div>
       <div class="u">papers.nips.cc</div>
     </a>
     <a class="card" href="https://openaccess.thecvf.com/content_CVPR_2019/html/Karras_A_Style-Based_Generator_Architecture_for_Generative_Adversarial_Networks_CVPR_2019_paper.html">
@@ -104,15 +104,29 @@
       that made GAN-generated profile photos hard to distinguish from real ones by 2019.</div>
       <div class="u">openaccess.thecvf.com</div>
     </a>
+    <a class="card" href="https://doi.org/10.1109/CVPR52688.2022.01042">
+      <div class="t">Rombach, Blattmann, Lorenz, Esser &amp; Ommer — High-Resolution Image Synthesis with Latent Diffusion Models (2022)</div>
+      <div class="d">The diffusion-model architecture (Stable Diffusion) that superseded GANs as the
+      dominant technique behind the synthetic images in Figure 2 and current-generation
+      information operations more broadly.</div>
+      <div class="u">doi.org/10.1109/CVPR52688.2022.01042</div>
+    </a>
   </div>
 
-  <h2>AI-generated text detection</h2>
+  <h2>AI-generated text: detection and its limits</h2>
   <div class="cards">
     <a class="card" href="https://aclanthology.org/P19-3019/">
       <div class="t">Gehrmann, Strobelt &amp; Rush — GLTR: Statistical Detection and Visualization of Generated Text (2019)</div>
       <div class="d">An early tool for spotting machine-generated text from its statistical
       fingerprint, from the pre-LLM era when detection was still tractable at the sentence level.</div>
       <div class="u">aclanthology.org/P19-3019</div>
+    </a>
+    <a class="card" href="https://proceedings.mlr.press/v202/kirchenbauer23a.html">
+      <div class="t">Kirchenbauer, Geiping, Wen, Katz, Miers &amp; Goldstein — A Watermark for Large Language Models (2023)</div>
+      <div class="d">The provenance-based approach the field shifted to once post-hoc statistical
+      detectors like GLTR stopped working against LLM-fluent text: mark generation at the source
+      instead of trying to catch it after the fact.</div>
+      <div class="u">proceedings.mlr.press</div>
     </a>
   </div>
 
