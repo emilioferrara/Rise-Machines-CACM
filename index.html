@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Rise of Social Machines — Further Reading</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🤖</text></svg>">
+<meta name="description" content="Curated reading list of the techniques and tools discussed in 'The Rise of Social Machines' (Ferrara, Communications of the ACM), for readers who want to go deeper: bot-detection tools, coordination detection, synthetic-face generation, and AI-generated-text detection.">
+<link rel="canonical" href="https://emilioferrara.github.io/social-bots-ten-years/">
+
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Emilio Ferrara">
+<meta property="og:title" content="The Rise of Social Machines — Further Reading">
+<meta property="og:description" content="Curated reading list of the techniques and tools discussed in the CACM Viewpoint, for readers who want to go deeper.">
+<meta property="og:url" content="https://emilioferrara.github.io/social-bots-ten-years/">
+
+<style>
+  :root {
+    color-scheme: light dark;
+    --ground:#FBFAF9; --panel:#FFFFFF; --ink:#17161A; --ink-soft:#55525C;
+    --ink-faint:#8A8691; --rule:#E4E1DE; --accent:#C4432A; --accent-soft:#FBF0ED;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --ground:#131215; --panel:#1B1A1F; --ink:#EDEBEF; --ink-soft:#A9A5B0;
+            --ink-faint:#736F7B; --rule:#2C2A31; --accent:#F0785C; --accent-soft:#2A1C19; }
+  }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--ground); color:var(--ink);
+         font-family:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+         font-size:16px; line-height:1.55; -webkit-font-smoothing:antialiased; }
+  .wrap { max-width:44rem; margin:0 auto; padding:0 1.25rem 5rem; }
+  header { padding:4.5rem 0 2.2rem; border-bottom:1px solid var(--rule); }
+  .tick { width:2.5rem; height:4px; background:var(--accent); border-radius:2px; }
+  h1 { margin:1.1rem 0 0; font-size:clamp(1.7rem,5vw,2.4rem); font-weight:750; letter-spacing:-.02em; }
+  .role { margin:.7rem 0 0; color:var(--ink-soft); font-size:1.02rem; }
+  .role b { font-weight:650; color:var(--ink); }
+  h2 { margin:2.6rem 0 .9rem; font-size:.78rem; font-weight:700; letter-spacing:.09em;
+       text-transform:uppercase; color:var(--ink-faint); }
+  .cards { display:grid; gap:.7rem; }
+  a.card { display:block; padding:1rem 1.15rem; background:var(--panel);
+           border:1px solid var(--rule); border-radius:10px; text-decoration:none;
+           color:var(--ink); transition:border-color .15s, background .15s; }
+  a.card:hover { border-color:var(--accent); background:var(--accent-soft); }
+  a.card .t { font-weight:650; }
+  a.card .d { margin-top:.15rem; font-size:.9rem; color:var(--ink-soft); }
+  a.card .u { margin-top:.3rem; font-size:.8rem; color:var(--accent); font-weight:600; }
+  footer { margin-top:3rem; padding-top:1.4rem; border-top:1px solid var(--rule);
+           font-size:.85rem; color:var(--ink-faint); }
+  footer a { color:var(--ink-soft); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="tick"></div>
+    <h1>The Rise of Social Machines — Further Reading</h1>
+    <p class="role">Companion page for the <b>Communications of the ACM</b> Viewpoint by
+    Emilio Ferrara, marking ten years since "The Rise of Social Bots" (CACM 59(7), 2016).</p>
+    <p class="role">The Viewpoint names several detection tools and generation techniques
+    without formal citation, to stay inside CACM's reference limit for the format. This page
+    is the entry point those references would have been: one citation per technique, for
+    readers who want to go further.</p>
+  </header>
+
+  <h2>Account-level bot detection</h2>
+  <div class="cards">
+    <a class="card" href="https://doi.org/10.1145/2872518.2889302">
+      <div class="t">Davis, Varol, Ferrara, Flammini &amp; Menczer — BotOrNot: A System to Evaluate Social Bots (2016)</div>
+      <div class="d">The tool later renamed Botometer. Supervised classification over content,
+      network, temporal, and metadata signals; the first public web service for account-level
+      bot scoring.</div>
+      <div class="u">doi.org/10.1145/2872518.2889302</div>
+    </a>
+    <a class="card" href="https://doi.org/10.1007/s42001-022-00177-5">
+      <div class="t">Yang, Ferrara &amp; Menczer — Botometer 101: Social Bot Practicum for Computational Social Scientists (2022)</div>
+      <div class="d">A practitioner's guide to the current version of Botometer: what its scores
+      mean, where they fail, and how to use them responsibly in research.</div>
+      <div class="u">doi.org/10.1007/s42001-022-00177-5</div>
+    </a>
+  </div>
+
+  <h2>Coordination and the field's methodological shift</h2>
+  <div class="cards">
+    <a class="card" href="https://doi.org/10.1145/3409116">
+      <div class="t">Cresci — A Decade of Social Bot Detection (2020)</div>
+      <div class="d">A field-wide retrospective covering the same decade as the CACM Viewpoint,
+      from account-level classification to coordination detection, with a taxonomy of what each
+      generation of methods could and could not see.</div>
+      <div class="u">doi.org/10.1145/3409116</div>
+    </a>
+  </div>
+
+  <h2>Synthetic faces (GAN-generated identities)</h2>
+  <div class="cards">
+    <a class="card" href="https://papers.nips.cc/paper/5423-generative-adversarial-nets">
+      <div class="t">Goodfellow et al. — Generative Adversarial Nets (2014)</div>
+      <div class="d">The foundational paper introducing generative adversarial networks (GANs),
+      the technique behind the synthetic profile photos discussed in the piece.</div>
+      <div class="u">papers.nips.cc</div>
+    </a>
+    <a class="card" href="https://openaccess.thecvf.com/content_CVPR_2019/html/Karras_A_Style-Based_Generator_Architecture_for_Generative_Adversarial_Networks_CVPR_2019_paper.html">
+      <div class="t">Karras, Laine &amp; Aila — A Style-Based Generator Architecture for GANs (StyleGAN, 2019)</div>
+      <div class="d">The architecture behind the high-resolution, photorealistic synthetic faces
+      that made GAN-generated profile photos hard to distinguish from real ones by 2019.</div>
+      <div class="u">openaccess.thecvf.com</div>
+    </a>
+  </div>
+
+  <h2>AI-generated text detection</h2>
+  <div class="cards">
+    <a class="card" href="https://aclanthology.org/P19-3019/">
+      <div class="t">Gehrmann, Strobelt &amp; Rush — GLTR: Statistical Detection and Visualization of Generated Text (2019)</div>
+      <div class="d">An early tool for spotting machine-generated text from its statistical
+      fingerprint, from the pre-LLM era when detection was still tractable at the sentence level.</div>
+      <div class="u">aclanthology.org/P19-3019</div>
+    </a>
+  </div>
+
+  <h2>Cited in the Viewpoint</h2>
+  <div class="cards">
+    <a class="card" href="https://doi.org/10.5210/fm.v29i11.13831">
+      <div class="t">Minici, Cinus, Luceri &amp; Ferrara — Uncovering Coordinated Cross-Platform Information Operations (2024)</div>
+      <div class="d">Source of Figure 2(a)-(d) in the Viewpoint: the coordinated-account and
+      mock-news-site artifacts from a real 2024 network, detected from co-sharing behavior alone.</div>
+      <div class="u">doi.org/10.5210/fm.v29i11.13831</div>
+    </a>
+    <a class="card" href="https://reports.dotnex.ai/">
+      <div class="t">dotNex — Influence Operations on TikTok During the Iran War (2026)</div>
+      <div class="d">Source of Figure 2(e)-(k): the AI-generated soldier personas and their
+      shared production-pipeline signature.</div>
+      <div class="u">reports.dotnex.ai</div>
+    </a>
+  </div>
+
+  <footer>
+    emiliofe [at] usc.edu · Companion material for
+    <a href="https://www.emilio.ferrara.name/">The Rise of Social Machines</a>,
+    <i>Communications of the ACM</i> (in press). Canonical home:
+    <a href="https://www.emilio.ferrara.name/">emilio.ferrara.name</a>.
+  </footer>
+</div>
+</body>
+</html>
